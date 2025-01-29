@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+}
+
+.level {
+    display: none;
+    margin-top: 50px;
+}
+
+.level.active {
+    display: block;
+}
+
+.timer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color : white; 
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

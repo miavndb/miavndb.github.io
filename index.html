@@ -1,1 +1,57 @@
-Hello World, Greetings from Mia !! Ik ga beginnen aan mijn website !!
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mia's labirint</title>
+    <link rel="stylesheet" href="spel.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div id="timer" class="timer" style="display: none;">Tijd: 0s</div>
+
+    <div id="naamLevel" class="level active">
+        <h1>Welkom bij het Spel!</h1>
+        <p>Vul je naam in om te beginnen:</p>
+        <input type="text" id="userName" placeholder="Vul je naam in">
+        <button onclick="beginSpel()">Begin Spel</button>
+    </div>
+
+    <div id="level1" class="level">
+        <h1>Level 1: Start!</h1>
+        <p>Klik op de knop om naar het volgende level te gaan.</p>
+        <button onclick="gaNaarLevel(2)">Volgende</button>
+    </div>
+
+    <div id="level2" class="level">
+        <h1>Level 2: Klik niet op de rode knop!</h1>
+
+        <button id="taskButton" onclick="voltooiOpdrachtLevel2()" style="background-color: red;">Niet klikken</button>
+
+        <button id="level3Button" onclick="gaNaarLevel(3)" style="display: none;">Volgende</button>
+    </div>
+
+    <div id="level3" class="level">
+        <h1>Level 3: Voer de juiste code in!</h1>
+        <p>Hint: 12_45</p>
+        <input type="text" id="codeInput">
+        <button onclick="controleerCodeLevel3()">Controleer</button>
+        <p id="codeFeedback" style="display: none; color: red;">Fout! Probeer opnieuw.
+        </p>
+    </div>
+
+    <div id="level4" class="level">
+        <h1>Level 4: Klik op de knop</h1>
+        <button id="movingButton">Klik mij!</button>
+    </div>
+
+    <div id="eindLevel" class="level">
+        <h1 id="congratsMessage">Gefeliciteerd!</h1>
+        <p id="finalTime"></p>
+        <button onclick="herstartSpel()">Speel opnieuw</button>
+    </div>
+</body>
+
+</html>
